@@ -1,0 +1,290 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, sans-serif;
+}
+
+body {
+  background: #0b0d12;
+  color: #fff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* NAV BAR */
+
+section {
+  scroll-margin-top: 90px;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  background: rgba(5, 6, 10, 0.7);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.nav-inner {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  opacity: 0.9;
+}
+
+.nav-links a {
+  margin-left: 2rem;
+  text-decoration: none;
+  color: white;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+.nav-links a:hover {
+  opacity: 1;
+}
+
+/* EXPERTISE */
+
+.expertise {
+  padding: 5rem 10%;
+  background: #0b0d12;
+}
+
+.expertise h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 3rem;
+}
+
+.expertise-item {
+  text-align: center;
+  padding: 2rem;
+  background: #141824;
+  border-radius: 18px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.expertise-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.expertise-item img {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 1.2rem;
+}
+
+.expertise-item h3 {
+  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
+}
+
+.expertise-item p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  opacity: 0.75;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.4);
+}
+
+.hero-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  margin-bottom: 1.5rem;
+  object-fit: cover;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero p {
+  opacity: 0.8;
+}
+
+/* PROJECTS */
+.projects {
+  padding: 5rem 10%;
+}
+
+.projects h2 {
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.card {
+  background: #141824;
+  border-radius: 16px;
+  padding: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.tags span {
+  background: #1f2440;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  margin-right: 0.4rem;
+}
+
+.tags {
+  margin-bottom: 1rem;
+}
+
+/* MODAL */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: #0f1320;
+  max-width: 900px;
+  width: 90%;
+  padding: 2rem;
+  border-radius: 20px;
+}
+
+.modal-content img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.close {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  float: right;
+  cursor: pointer;
+}
+
+/* CONTACT */
+.contact {
+  padding: 4rem 10%;
+  background: #05060a;
+  text-align: center;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.contact-links a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  opacity: 0.85;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.contact-links a:hover {
+  opacity: 1;
+  transform: translateY(-3px);
+}
+
+.contact-links img {
+  width: 22px;
+  height: 22px;
+}
+
+.location {
+  font-size: 0.9rem;
+  opacity: 0.6;
+}
+
+/* TABLETTE */
+@media (max-width: 1024px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* MOBILE */
+@media (max-width: 640px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projects {
+    padding: 4rem 6%;
+  }
+}
